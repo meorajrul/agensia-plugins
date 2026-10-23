@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "agensia-harness",
+  "version": "1.0.0",
+  "description": "Design governed Agensia Pods and agent harnesses with explicit authority, G0–G8 design gates, ontology, saved Workflow specifications and acceptance checks. Local drafting by default. Strictly prohibits production mutations; platform operations require verified non-production platform and downstream targets.",
+  "author": {
+    "name": "Meor Ajrul",
+    "email": "meor@agensia.com"
+  },
+  "homepage": "https://agensia.com",
+  "license": "Proprietary",
+  "keywords": [
+    "agensia-harness",
+    "p2a",
+    "pod-design",
+    "agent-harness",
+    "authority",
+    "governance",
+    "ontology",
+    "workflow",
+    "human-in-the-loop",
+    "acceptance-testing"
+  ]
+}

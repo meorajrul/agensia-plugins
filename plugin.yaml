@@ -1,0 +1,6 @@
+name: agensia-plugins
+version: 1.0.0
+description: Dedicated Agensia platform harness and governed Pod design skills.
+author: Meor Ajrul
+provides_tools: []
+provides_hooks: []

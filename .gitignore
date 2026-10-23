@@ -1,0 +1,27 @@
+.DS_Store
+.~lock.*
+*.bak
+node_modules/
+.env
+.env.local
+**desktop.ini**
+
+# cg-sync — never commit user-specific config or runtime state
+**/config.local.json
+**/config.local.yaml
+**/*.local.json
+**/state/checksums-*.json
+**/state/drift-summary.json
+**/state/version-history.log
+**/reports/*-drift.md
+**/patches/*/
+
+# Portable exports and Python caches
+dist/
+**__pycache__/**
+*.pyc
+.secret/
+
+# OS folder metadata is not portable plugin content
+[Dd][Ee][Ss][Kk][Tt][Oo][Pp].[Ii][Nn][Ii]
+[Tt][Hh][Uu][Mm][Bb][Ss].[Dd][Bb]

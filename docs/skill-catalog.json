@@ -1,0 +1,11 @@
+[
+  {
+    "plugin": "agensia-harness",
+    "name": "agensia-harness",
+    "path": "plugins/agensia-harness/skills/agensia-harness/SKILL.md",
+    "description": "Design an Agensia Pod locally or convert a business process into a governed AI Pod specification with P2A. Apply Outcome, Context, Sources, Scope, Authority, Output and Verification throughout the G0–G8 approval workflow aligned to the Agensia wizard (Overview, Ontology, Talent, Pod Hierarchy). Covers BPMN capture, harness levels HL0–HL4, control envelopes, ontology packs, Talents, saved Workflows, Decision Desk, human checkpoints, golden sets and regressions. Use when the user asks to create, build, design or agentify a Pod, write or evaluate its prompt, outcomes, Talents or ontology, set what an agent may do, or check whether a Pod change meets its owner’s goals.",
+    "departments": "Engineering, PMO, Operations",
+    "sha256": "2e228286251e89f77de88202bb967dcaaf1c0044adc2bd52bb77811556aab77a",
+    "shared_scripts_sha256": null
+  }
+]

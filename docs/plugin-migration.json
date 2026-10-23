@@ -1,0 +1,11 @@
+{
+  "date": "2026-10-23",
+  "skills_renamed": true,
+  "skill_moves": [
+    {
+      "from": "agensia-pods:p2a-pod-builder@agensia-cg-plugins",
+      "to": "agensia-harness:agensia-harness@agensia-plugins",
+      "scope": "Only the builder skill moved. The UIP2Industry companion remains in its original plugin."
+    }
+  ]
+}

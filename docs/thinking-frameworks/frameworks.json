@@ -1,0 +1,156 @@
+{
+  "source": {
+    "title": "Agensia Harness thinking frameworks",
+    "format": "Maintained reference cards with public origin citations",
+    "checked": "Consult the cited sources for framework origin and detail.",
+    "marks": "Names marked with ® or ™ belong to their owners. Cards marked widely used did not start at a consulting firm. The origin line names the creator."
+  },
+  "groups": {
+    "think": {
+      "label": "Think",
+      "purpose": "Break down messy problems and find the answer fast."
+    },
+    "decide": {
+      "label": "Decide",
+      "purpose": "Make clear, fast calls and know who owns them."
+    }
+  },
+  "situations": {
+    "problem": "Crack a messy problem",
+    "write": "Write an email, memo or deck",
+    "decide": "Make or delegate a decision",
+    "prioritise": "Prioritise my time",
+    "team": "Build a healthy team"
+  },
+  "frameworks": [
+    {
+      "id": "mece",
+      "group": "think",
+      "name": "MECE",
+      "kind": "firm",
+      "firm_source": "McKinsey",
+      "used_by": [
+        "McKinsey"
+      ],
+      "what": "Split anything into groups that don't overlap (Mutually Exclusive) and together cover everything (Collectively Exhaustive).",
+      "when": "You're breaking down a problem, listing options, or dividing work across people.",
+      "ordered_steps": true,
+      "steps": [
+        "Write the whole thing you're splitting at the top.",
+        "Pick one cutting logic: by customer, by process step, internal vs external, and so on.",
+        "Check for overlap: could any item sit in two buckets? Merge or redefine them.",
+        "Check for gaps: is anything missing? Use an “other” bucket only as a last resort.",
+        "Keep 3 to 5 buckets per level."
+      ],
+      "habit": "Before you send any list of options or workstreams, ask two questions: any overlap? any gaps?",
+      "example": "Why is the pipeline slow? Split it into: not enough leads, leads not converting, deals stalling after proposal. No overlap, nothing left out.",
+      "watch_out": "Minto coined the acronym at McKinsey. The logic itself goes back to Aristotle.",
+      "origin": "Barbara Minto, McKinsey (1960s).",
+      "sources": [
+        {
+          "title": "McKinsey Alumni: Barbara Minto on MECE",
+          "url": "https://www.mckinsey.com/alumni/news-and-events/global-news/alumni-news/barbara-minto-mece-i-invented-it-so-i-get-to-say-how-to-pronounce-it"
+        }
+      ],
+      "situations": [
+        "problem",
+        "write"
+      ]
+    },
+    {
+      "id": "decision-types",
+      "group": "decide",
+      "name": "Four decision types",
+      "kind": "firm",
+      "firm_source": "McKinsey",
+      "used_by": [
+        "McKinsey"
+      ],
+      "what": "Different decisions need different processes. Sort by how often they happen and how risky they are.",
+      "when": "Deciding which forum or process a decision needs.",
+      "ordered_steps": false,
+      "steps": [
+        "Big-bet (rare, high-risk): name an executive sponsor, break it into stages, use a standard debate process.",
+        "Cross-cutting (frequent, high-risk, many groups involved): map the process, set clear forums, share goals.",
+        "Delegated (frequent, low-risk): push it to the team. Ask: is it reversible? can a direct report make it? can I hold them accountable?",
+        "Ad hoc (rare, low-stakes): just decide."
+      ],
+      "habit": "Tag each item on your decision list BB, CC, DL or AH, and route it to the right place.",
+      "example": "A new office is a big bet. Weekly staffing is cross-cutting. Travel approvals are delegated.",
+      "watch_out": "",
+      "origin": "De Smet, Lackey & Weiss, McKinsey Quarterly (2017).",
+      "sources": [
+        {
+          "title": "McKinsey: Untangling your organization's decision making",
+          "url": "https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/untangling-your-organizations-decision-making"
+        }
+      ],
+      "situations": [
+        "decide"
+      ]
+    },
+    {
+      "id": "doors",
+      "group": "decide",
+      "name": "One-way and two-way doors",
+      "kind": "widely used",
+      "firm_source": "",
+      "used_by": [],
+      "what": "Irreversible decisions deserve care; reversible ones deserve speed.",
+      "when": "You're stuck on a decision, or everything is getting the heavyweight treatment.",
+      "ordered_steps": false,
+      "steps": [
+        "Ask: can we reverse this cheaply?",
+        "Two-way door (Type 2): decide fast, alone or in a small team.",
+        "One-way door (Type 1): slow down, consult widely, test your assumptions.",
+        "Watch for the big-company habit of treating every decision as Type 1."
+      ],
+      "habit": "When a decision stalls, ask “Is this a one-way door?” If not, decide today.",
+      "example": "Testing a new LinkedIn format is a two-way door. Signing a five-year lease is a one-way door.",
+      "watch_out": "",
+      "origin": "Jeff Bezos, Amazon shareholder letter for 2015 (published 2016).",
+      "sources": [
+        {
+          "title": "Amazon 2015 shareholder letter (SEC)",
+          "url": "https://www.sec.gov/Archives/edgar/data/1018724/000119312516530910/d168744dex991.htm"
+        }
+      ],
+      "situations": [
+        "decide",
+        "prioritise"
+      ]
+    },
+    {
+      "id": "raci",
+      "group": "decide",
+      "name": "RACI and DACI",
+      "kind": "widely used",
+      "firm_source": "",
+      "used_by": [],
+      "what": "Make task ownership explicit, so nothing falls between people.",
+      "when": "Setting up a project, or when work keeps slipping.",
+      "ordered_steps": false,
+      "steps": [
+        "Responsible: does the work.",
+        "Accountable: owns the outcome. Only one person per task.",
+        "Consulted: gives input before (two-way).",
+        "Informed: is told after (one-way).",
+        "For decisions, DACI works better: Driver, Approver (one person), Contributors, Informed."
+      ],
+      "habit": "Add an “A” column with one name per row to every project tracker.",
+      "example": "Client report: R = analyst, A = engagement lead, C = subject expert, I = client sponsor.",
+      "watch_out": "There's no verified inventor of RACI. Atlassian's claim that McKinsey found DACI projects 25% more successful doesn't appear in the McKinsey source it cites.",
+      "origin": "RACI: general project-management practice. DACI: popularised by Atlassian.",
+      "sources": [
+        {
+          "title": "Atlassian Team Playbook: DACI",
+          "url": "https://www.atlassian.com/team-playbook/plays/daci"
+        }
+      ],
+      "situations": [
+        "decide",
+        "team"
+      ]
+    }
+  ]
+}

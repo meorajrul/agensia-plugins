@@ -1,0 +1,16 @@
+{
+  "agensia-pods:p2a-pod-builder": {
+    "previous_name": "p2a-pod-builder",
+    "name": "agensia-harness",
+    "previous_collection": "agensia-cg-plugins",
+    "plugin": "agensia-harness",
+    "new_path": "plugins/agensia-harness/skills/agensia-harness/SKILL.md"
+  },
+  "agensia-pods:stratiq-p2a-pod-builder": {
+    "previous_name": "stratiq-p2a-pod-builder",
+    "name": "agensia-harness",
+    "previous_collection": "agensia-cg-plugins",
+    "plugin": "agensia-harness",
+    "new_path": "plugins/agensia-harness/skills/agensia-harness/SKILL.md"
+  }
+}

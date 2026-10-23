@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "excluded_plugins": {},
+  "excluded_skills": {},
+  "skills": {
+    "agensia-harness/agensia-harness": {
+      "anchor": "## Reference files",
+      "frameworks": [
+        {
+          "id": "mece",
+          "use": "Stage 2: keep skills mutually exclusive and together covering every agent-assigned activity."
+        },
+        {
+          "id": "decision-types",
+          "use": "Stage 3: sort each decision as big-bet, cross-cutting, delegated or ad hoc before setting the harness level. Only frequent, low-risk delegated decisions suit HL2 and above."
+        },
+        {
+          "id": "doors",
+          "use": "Stage 4: one-way door actions (payments, external sends, record deletion) always escalate to a human checkpoint."
+        },
+        {
+          "id": "raci",
+          "use": "Stages 3 and 4: every skill has one accountable human owner and a named escalation target."
+        }
+      ],
+      "reference_intro": "Use these frameworks at the named design steps. They do not replace evidence, authorisation, approval or the production prohibition. Public source links and origin attribution accompany each card."
+    }
+  }
+}

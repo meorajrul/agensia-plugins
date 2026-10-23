@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-marketplace.json",
+  "name": "agensia-plugins",
+  "description": "Dedicated Agensia platform skills for governed harness and Pod design.",
+  "version": "1.0.0",
+  "owner": {
+    "name": "Meor Ajrul",
+    "email": "meor@agensia.com"
+  },
+  "metadata": {
+    "pluginRoot": "./plugins"
+  },
+  "plugins": [
+    {
+      "name": "agensia-harness",
+      "source": "./plugins/agensia-harness",
+      "category": "pod-framework",
+      "tags": [
+        "agensia-harness",
+        "p2a",
+        "pod-design",
+        "agent-harness",
+        "authority",
+        "governance",
+        "ontology",
+        "workflow",
+        "human-in-the-loop",
+        "acceptance-testing"
+      ]
+    }
+  ]
+}
