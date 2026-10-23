@@ -2,8 +2,8 @@
 
 ## Choose your download
 
-- [Skill ZIP](https://github.com/meorajrul/agensia-plugins/raw/refs/heads/main/downloads/agensia-harness.zip): use for custom-skill upload in ChatGPT or Claude, or manual folder installation.
-- [Portable plugin ZIP](https://github.com/meorajrul/agensia-plugins/raw/refs/heads/main/downloads/agensia-harness-plugin.zip): use only in a host supporting Agent Plugins v1. It is not the custom-skill upload ZIP.
+- [Skill ZIP](https://github.com/meorajrul/agensia-plugins/releases/latest/download/agensia-harness.zip): use for custom-skill upload in ChatGPT or Claude, or manual folder installation.
+- [Portable plugin ZIP](https://github.com/meorajrul/agensia-plugins/releases/latest/download/agensia-harness-plugin.zip): use only in a host supporting Agent Plugins v1. It is not the custom-skill upload ZIP.
 
 ## ChatGPT Desktop
 

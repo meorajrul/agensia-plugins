@@ -25,3 +25,6 @@ dist/
 # OS folder metadata is not portable plugin content
 [Dd][Ee][Ss][Kk][Tt][Oo][Pp].[Ii][Nn][Ii]
 [Tt][Hh][Uu][Mm][Bb][Ss].[Dd][Bb]
+
+# Installable ZIPs belong in GitHub Releases, never in the source tree
+*.zip

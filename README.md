@@ -1,5 +1,7 @@
 # Agensia Plugins
 
+Download installable ZIPs from [GitHub Releases](https://github.com/meorajrul/agensia-plugins/releases/latest). ZIP archives are release assets and are not stored in the source tree.
+
 Reference guidance now uses self-contained, company-neutral design checks for coverage, decision risk, reversibility and ownership.
 
 [Installation guide: ChatGPT Desktop, Claude Desktop and manual ZIP import](docs/INSTALL.md).

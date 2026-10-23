@@ -16,3 +16,5 @@ This repository is the canonical distributable source. Read `README.md` and `doc
 - GitHub pushes, publishing and host installation are separate actions. Respect the user’s chosen manual release process.
 
 Business source paths are semantic examples. Never require the author’s workspace taxonomy. Resolve actual inputs and output destinations with the recipient. Keep README explanations concise and include Mermaid diagrams. Update both collection manifests, catalogs and migration records when moving a plugin.
+
+- Never commit or push ZIP archives into repository files. Build them under ignored `dist/` and distribute them only as GitHub Release assets. Installation links must use Releases. Do not rewrite existing Git history without explicit authorization.
