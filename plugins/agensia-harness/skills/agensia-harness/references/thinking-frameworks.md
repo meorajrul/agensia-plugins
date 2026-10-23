@@ -1,113 +1,108 @@
 # Thinking frameworks for agensia-harness
 
-Use these frameworks at the named design steps. They do not replace evidence, authorisation, approval or the production prohibition. Public source links and origin attribution accompany each card.
+Use these neutral design checks at the named steps. They do not replace evidence, authorisation, approval or the production prohibition.
 
-## MECE
+## Coverage and overlap review
 
-McKinsey · Think
+General guidance · Think
 
 **In this skill:** Stage 2: keep skills mutually exclusive and together covering every agent-assigned activity.
 
-**What it is:** Split anything into groups that don't overlap (Mutually Exclusive) and together cover everything (Collectively Exhaustive).
+**What it is:** Check that the proposed capabilities cover the agreed process without assigning the same responsibility twice.
 
-**Use it when:** You're breaking down a problem, listing options, or dividing work across people.
+**Use it when:** Use when dividing a process into outcomes or Talents.
 
 **How it works:**
 
-1. Write the whole thing you're splitting at the top.
-2. Pick one cutting logic: by customer, by process step, internal vs external, and so on.
-3. Check for overlap: could any item sit in two buckets? Merge or redefine them.
-4. Check for gaps: is anything missing? Use an “other” bucket only as a last resort.
-5. Keep 3 to 5 buckets per level.
+1. List the activities inside the agreed scope.
+2. Assign each activity to one primary capability.
+3. Identify duplicated responsibilities and uncovered activities.
+4. Resolve each gap or overlap with the process owner.
 
-**Daily habit:** Before you send any list of options or workstreams, ask two questions: any overlap? any gaps?
+**Daily habit:** Review coverage whenever scope changes.
 
-**Example:** Why is the pipeline slow? Split it into: not enough leads, leads not converting, deals stalling after proposal. No overlap, nothing left out.
+**Example:** A request process separates intake, assessment and decision recording.
 
-**Watch out:** Minto coined the acronym at McKinsey. The logic itself goes back to Aristotle.
+**Watch out:** Coverage does not prove runtime enforcement.
 
-**Origin:** Barbara Minto, McKinsey (1960s).
+**Origin:** General design guidance for this skill; no company affiliation or endorsement is asserted.
 
-**Sources:** [McKinsey Alumni: Barbara Minto on MECE](https://www.mckinsey.com/alumni/news-and-events/global-news/alumni-news/barbara-minto-mece-i-invented-it-so-i-get-to-say-how-to-pronounce-it)
+## Decision risk and frequency review
 
-## Four decision types
-
-McKinsey · Decide
+General guidance · Decide
 
 **In this skill:** Stage 3: sort each decision as big-bet, cross-cutting, delegated or ad hoc before setting the harness level. Only frequent, low-risk delegated decisions suit HL2 and above.
 
-**What it is:** Different decisions need different processes. Sort by how often they happen and how risky they are.
+**What it is:** Choose review controls from consequence, repetition and uncertainty.
 
-**Use it when:** Deciding which forum or process a decision needs.
+**Use it when:** Use before proposing a harness level.
 
 **How it works:**
 
-- Big-bet (rare, high-risk): name an executive sponsor, break it into stages, use a standard debate process.
-- Cross-cutting (frequent, high-risk, many groups involved): map the process, set clear forums, share goals.
-- Delegated (frequent, low-risk): push it to the team. Ask: is it reversible? can a direct report make it? can I hold them accountable?
-- Ad hoc (rare, low-stakes): just decide.
+1. Describe the decision and its possible consequences.
+2. Record how often it occurs and whether the evidence varies.
+3. Identify the human owner and the approval required.
+4. Propose authority within the skill’s existing harness rules.
 
-**Daily habit:** Tag each item on your decision list BB, CC, DL or AH, and route it to the right place.
+**Daily habit:** Reassess authority when consequences or inputs change.
 
-**Example:** A new office is a big bet. Weekly staffing is cross-cutting. Travel approvals are delegated.
+**Example:** A recurring formatting choice may need fewer checks than an exceptional financial commitment.
 
-**Origin:** De Smet, Lackey & Weiss, McKinsey Quarterly (2017).
+**Watch out:** Frequent decisions can still require human approval.
 
-**Sources:** [McKinsey: Untangling your organization's decision making](https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/untangling-your-organizations-decision-making)
+**Origin:** General design guidance for this skill; no company affiliation or endorsement is asserted.
 
-## One-way and two-way doors
+## Reversibility review
 
-Widely used · Decide
+General guidance · Decide
 
 **In this skill:** Stage 4: one-way door actions (payments, external sends, record deletion) always escalate to a human checkpoint.
 
-**What it is:** Irreversible decisions deserve care; reversible ones deserve speed.
+**What it is:** Evaluate recovery before assigning execution authority.
 
-**Use it when:** You're stuck on a decision, or everything is getting the heavyweight treatment.
+**Use it when:** Use when an action could change external state.
 
 **How it works:**
 
-- Ask: can we reverse this cheaply?
-- Two-way door (Type 2): decide fast, alone or in a small team.
-- One-way door (Type 1): slow down, consult widely, test your assumptions.
-- Watch for the big-company habit of treating every decision as Type 1.
+1. Describe the state change and who it affects.
+2. Identify a tested recovery route and its limits.
+3. Record recovery cost, delay and any lasting consequences.
+4. Escalate consequential or inadequately recoverable actions.
 
-**Daily habit:** When a decision stalls, ask “Is this a one-way door?” If not, decide today.
+**Daily habit:** Check the recovery route before each new action class.
 
-**Example:** Testing a new LinkedIn format is a two-way door. Signing a five-year lease is a one-way door.
+**Example:** A local draft can be revised; a signed commitment can create lasting obligations.
 
-**Origin:** Jeff Bezos, Amazon shareholder letter for 2015 (published 2016).
+**Watch out:** Reversibility alone does not grant permission.
 
-**Sources:** [Amazon 2015 shareholder letter (SEC)](https://www.sec.gov/Archives/edgar/data/1018724/000119312516530910/d168744dex991.htm)
+**Origin:** General design guidance for this skill; no company affiliation or endorsement is asserted.
 
-## RACI and DACI
+## Responsibility and decision ownership
 
-Widely used · Decide
+General guidance · Decide
 
 **In this skill:** Stages 3 and 4: every skill has one accountable human owner and a named escalation target.
 
-**What it is:** Make task ownership explicit, so nothing falls between people.
+**What it is:** Name who performs the task, owns its result and makes its decisions.
 
-**Use it when:** Setting up a project, or when work keeps slipping.
+**Use it when:** Use when defining responsibilities or escalation.
 
 **How it works:**
 
-- Responsible: does the work.
-- Accountable: owns the outcome. Only one person per task.
-- Consulted: gives input before (two-way).
-- Informed: is told after (one-way).
-- For decisions, DACI works better: Driver, Approver (one person), Contributors, Informed.
+1. Name the role that prepares or performs the work.
+2. Name one accountable owner for the result.
+3. Identify the assigned human decision maker where required.
+4. List the roles consulted before a decision and informed afterward.
+5. Specify an escalation recipient and timeout.
 
-**Daily habit:** Add an “A” column with one name per row to every project tracker.
+**Daily habit:** Review ownership when roles or process boundaries change.
 
-**Example:** Client report: R = analyst, A = engagement lead, C = subject expert, I = client sponsor.
+**Example:** An analyst prepares an assessment, a designated reviewer decides, and the case owner records the receipt.
 
-**Watch out:** There's no verified inventor of RACI. Atlassian's claim that McKinsey found DACI projects 25% more successful doesn't appear in the McKinsey source it cites.
+**Watch out:** Role labels are not identity verification or approval evidence.
 
-**Origin:** RACI: general project-management practice. DACI: popularised by Atlassian.
-
-**Sources:** [Atlassian Team Playbook: DACI](https://www.atlassian.com/team-playbook/plays/daci)
+**Origin:** General design guidance for this skill; no company affiliation or endorsement is asserted.
 
 ---
 
-Names marked with ® or ™ belong to their owners. Cards marked widely used did not start at a consulting firm. The origin line names the creator. Generated from the agensia-plugins framework source. Edit that source, not this file.
+These design checks do not replace evidence, authorisation, approval or the production prohibition. Generated from the agensia-plugins framework source. Edit that source, not this file.

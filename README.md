@@ -1,5 +1,7 @@
 # Agensia Plugins
 
+Reference guidance now uses self-contained, company-neutral design checks for coverage, decision risk, reversibility and ownership.
+
 [Installation guide: ChatGPT Desktop, Claude Desktop and manual ZIP import](docs/INSTALL.md).
 
 Dedicated platform skills for designing governed Agensia Pods and agent harnesses. Bring your own process, approved sources and accountable owner.
@@ -37,5 +39,5 @@ These are intended users of the plugins. PMO means project management; GTM means
 
 [Browse every skill](docs/skill-catalog.md) · [Name migration](docs/skill-name-migration.json)
 
-Catalog fingerprint: `afbbeb1c01b76dd076bd17710c71f8ea7bd0993e6c88ea03f7fee8ecf6f0beae`.
+Catalog fingerprint: `46b601466afee2d1cedaeb5dbfcd351d9a8e3c5f7a257eeaf6a62f382498e297`.
 <!-- END BUNDLE CATALOG -->

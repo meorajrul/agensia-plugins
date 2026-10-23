@@ -266,10 +266,10 @@ Reconcile every outcome’s seven coverage rows against the emitted artifacts an
 
 Use these where they fit the step named. They structure the thinking and never replace this skill's evidence, authorization, approval or judgement rules. Full cards with steps, pitfalls and sources: [thinking frameworks](references/thinking-frameworks.md).
 
-- **MECE.** Stage 2: keep skills mutually exclusive and together covering every agent-assigned activity.
-- **Four decision types.** Stage 3: sort each decision as big-bet, cross-cutting, delegated or ad hoc before setting the harness level. Only frequent, low-risk delegated decisions suit HL2 and above.
-- **One-way and two-way doors.** Stage 4: one-way door actions (payments, external sends, record deletion) always escalate to a human checkpoint.
-- **RACI and DACI.** Stages 3 and 4: every skill has one accountable human owner and a named escalation target.
+- **Coverage and overlap review.** Stage 2: keep skills mutually exclusive and together covering every agent-assigned activity.
+- **Decision risk and frequency review.** Stage 3: sort each decision as big-bet, cross-cutting, delegated or ad hoc before setting the harness level. Only frequent, low-risk delegated decisions suit HL2 and above.
+- **Reversibility review.** Stage 4: one-way door actions (payments, external sends, record deletion) always escalate to a human checkpoint.
+- **Responsibility and decision ownership.** Stages 3 and 4: every skill has one accountable human owner and a named escalation target.
 <!-- thinking-frameworks:end -->
 
 ## Reference files — read when needed, not upfront

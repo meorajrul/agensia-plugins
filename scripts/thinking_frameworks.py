@@ -63,7 +63,7 @@ def strip_block(text):
 
 
 def label(card, groups):
-    origin = card['firm_source'] if card['kind'] == 'firm' and card['firm_source'] else 'Widely used'
+    origin = card['firm_source'] if card['kind'] == 'firm' and card['firm_source'] else 'General guidance'
     return f"{origin} · {groups[card['group']]['label']}"
 
 

@@ -1,5 +1,7 @@
 # Agensia Harness
 
+Reference guidance now uses self-contained, company-neutral design checks for coverage, decision risk, reversibility and ownership.
+
 [Installation guide: ChatGPT Desktop, Claude Desktop and manual ZIP import](../../docs/INSTALL.md).
 
 Design governed AI Pods from business processes, approved sources and explicit human responsibilities. P2A connects **Outcome, Context, Sources, Scope, Authority, Output and Verification** through nine design gates, G0–G8.
@@ -45,7 +47,7 @@ Production release is a separate human-controlled process outside this skill. Th
 
 ## Use and verification
 
-Use the host's available tools and the recipient's approved sources. Read applicable local instructions. No installation, account connection or permission follows from importing this package. Framework attribution and public citations remain with their resources.
+Use the host's available tools and the recipient's approved sources. Read applicable local instructions. No installation, account connection or permission follows from importing this package. Reference guidance uses company-neutral design checks.
 
 Version **1.0.0** provides self-contained generic guidance, a non-waivable production boundary and synthetic refusal scenarios. Test cases start unrun; static package validation is not runtime certification. Intended departments: Engineering, PMO and Operations.
 
@@ -64,5 +66,5 @@ Skill paths and names below are the current invocation identifiers. Previous nam
 |---|---|
 | [agensia-harness](skills/agensia-harness/SKILL.md) | Engineering, PMO, Operations |
 
-Catalog fingerprint: `afbbeb1c01b76dd076bd17710c71f8ea7bd0993e6c88ea03f7fee8ecf6f0beae`.
+Catalog fingerprint: `46b601466afee2d1cedaeb5dbfcd351d9a8e3c5f7a257eeaf6a62f382498e297`.
 <!-- END SKILL CATALOG -->
