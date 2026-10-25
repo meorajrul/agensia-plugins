@@ -1,30 +1,132 @@
 # Agensia Harness
 
-The skill is now named `make-pod`; the plugin remains `agensia-harness`.
+The skill is named `make-pod`; the plugin is `agensia-harness`. Invoke it as `agensia-harness:make-pod`.
 
-Download installable ZIPs from [GitHub Releases](https://github.com/meorajrul/agensia-plugins/releases/latest). ZIP archives are release assets and are not stored in the source tree.
+**In one line:** turn a business process into a governed Agensia Pod. Every answer is traced to who said it, every agent action has an explicit harness level, and every outcome has a test set. Nothing goes live without a named human approving it.
 
-Reference guidance now uses self-contained, company-neutral design checks for coverage, decision risk, reversibility and ownership.
+Download installable ZIPs from [GitHub Releases](https://github.com/meorajrul/agensia-plugins/releases/latest). [Installation guide](../../docs/INSTALL.md).
 
-Version **1.1.1** adds generic configuration verification: commit/save/reopen checks, generated Talent and role reconciliation, page-helper evidence provenance, source consistency, honest score interpretation and bounded runtime regression candidates. It separates reusable methods from case facts and observed receipts; no customer data or fixed score guarantee is included.
+## Consultant mode
 
-[Installation guide: ChatGPT Desktop, Claude Desktop and manual ZIP import](../../docs/INSTALL.md).
+Most Pods are built by someone who is **not** the process owner. The skill supplies what an enterprise-architecture or business-process consultant would bring:
 
-Design governed AI Pods from business processes, approved sources and explicit human responsibilities. P2A connects **Outcome, Context, Sources, Scope, Authority, Output and Verification** through nine design gates, G0–G8.
+- **[Elicitation cards](skills/make-pod/references/elicitation-cards.md):** for every Agensia component, the question to ask, who must answer it, the evidence that confirms it and the safe default until confirmed.
+- **Provenance tags on every fact:** `OWN`, `DOC`, `SME`, `OBS`, `INF` and `ASM`. A gate cannot pass on an inferred or assumed *must* value.
+- **[TOGAF crosswalk](skills/make-pod/references/togaf-crosswalk.md)** and templates: Pod Charter, SIPOC + RACI, Data and Connector Catalogue, role binding, and Pod Contract with a playback log.
+- **Role-based naming:** approvers and escalation targets are roles; one role-binding source maps them to current holders.
+- **[Retrofit review](skills/make-pod/references/retrofit-review.md):** apply these checks to an existing Pod and report gaps before changing it.
+- **Process and Pod spec sections:** as-is/to-be baseline, requirements register, gap matrix and HL roadmap.
 
-## Agensia Harness
-
-Start with [the skill](skills/make-pod/SKILL.md). Supply a process/SOP, intended users and outputs, approved knowledge, systems and accountable owner. A partial brief is enough to begin a labelled draft; missing facts remain open.
-
-The skill produces a Pod specification, harness/control specification, ontology packs, per-outcome golden tests, platform field mapping and operating handoff. Local drafting is the default. No private reference library, environment URL or particular workspace folder structure is required. Keep the whole skill folder together when sharing it.
+## How it works — at a glance
 
 ```mermaid
 flowchart LR
-  P[Process and approved sources] --> D[Governed Pod design]
-  D --> G[Owner design gates]
-  G --> L[Local specification and test plan]
-  L --> N[Authorised non-production verification]
+  subgraph IN[Inputs]
+    P[Process / SOP]
+    S[Approved sources]
+    O[Owner and stakeholders]
+  end
+  subgraph DESIGN[make-pod design gates G0-G8]
+    G0[G0 Intake + Charter] --> G1[G1 Identity + RACI]
+    G1 --> G2[G2 Outcomes and Talents]
+    G2 --> G3[G3 Authority HL]
+    G3 --> G4[G4 Escalation + Decision Desk]
+    G4 --> G5[G5 Persona and format]
+    G5 --> G6[G6 Ontology packs]
+    G6 --> G7[G7 Golden set + owner goal]
+    G7 --> G8[G8 Emit + Pod Contract]
+  end
+  subgraph OUT[Outputs]
+    SPEC[Pod spec + harness]
+    ONT[Ontology upload set]
+    GLD[Golden tests]
+    WF[Workflow specs]
+  end
+  IN --> G0
+  G8 --> OUT
+  OUT --> NP[Authorised non-production build and read-back]
+  NP -. never .-> PROD[Production - prohibited]
 ```
+
+## What a Pod is made of — Agensia components
+
+```mermaid
+flowchart TB
+  POD[Pod = one job role] --> OUTC[Outcomes: one named output each]
+  OUTC --> ONTO[Ontology groups: versioned sources, rules, templates]
+  OUTC --> TAL[Talents: Use when... + Operation]
+  POD --> ROLE[Role and Sub-roles: 8 system-message sections]
+  TAL --> ENV[Control Envelope: Know Decide Do Prove Escalate Learn + HL0-HL4]
+  TAL --> WFL[Saved Workflow per repeatable or decision-bearing output]
+  WFL --> HR[human_request gate + receipt]
+  WFL --> DD[Decision Desk for calculated choices]
+  OUTC --> GOLD[Golden set: goal, target, floor]
+```
+
+Chain rule: **Outcome n ↔ Talent n ↔ Sub-role n**, at least one ontology pack per outcome, and one saved Workflow per repeatable output.
+
+## Consultant mode — when you are not the process owner
+
+```mermaid
+sequenceDiagram
+  participant B as Builder
+  participant SME as Performer or SME
+  participant OWN as Process owner
+  B->>SME: Walk me through the last real case
+  SME-->>B: Steps, inputs, exceptions (tag SME)
+  B->>B: Draft rules, HLs, outputs (tag INF)
+  B->>OWN: Playback - correct, change or don't know?
+  OWN-->>B: Confirmed (tag OWN) or Open item
+  B->>OWN: Gate Gn - approve, or tell me what to change?
+  OWN-->>B: Approve Gn (logged in Pod Contract)
+```
+
+| Ask this role | For |
+|---|---|
+| Sponsor | Drivers, business goal, KPI baseline |
+| Process owner | Outcomes, rules, HLs, approvers, targets, signature |
+| Performer / SME | Steps, inputs, volumes, exceptions, real cases |
+| Data / system owner | Systems of record, classification, connector scope |
+| Risk / compliance | Binding rules, prohibitions, retention |
+
+## TOGAF crosswalk
+
+```mermaid
+flowchart LR
+  PA[Prelim + A Vision] --> C1[Pod Charter - G0]
+  B[B Business] --> C2[Process as-is/to-be + SIPOC/RACI - G0-G1]
+  C[C Data + Apps] --> C3[Data and Connector Catalogue - G0/G3]
+  EF[E/F Gap + Migration] --> C4[Gap matrix + HL roadmap - G3]
+  G[G Governance] --> C5[Pod Contract + pre-checks - G8]
+  H[H Change] --> C6[Evaluation loop + HL history]
+  RM[Requirements Mgmt] --> C7[Requirements register to golden IDs]
+```
+
+## Harness levels
+
+| Level | Agent may | Human |
+|---|---|---|
+| HL0 Observer | read, summarise, alert | consumes |
+| HL1 Advisor | draft, recommend | executes everything |
+| HL2 Preparer | prepare complete actions + evidence | approves each action |
+| HL3 Bounded executor | reversible in-policy actions | reviews samples |
+| HL4 Delegated operator | end-to-end in envelope | owns risk; never for a new Pod |
+
+Irreversible, financial, legal or personal actions are never above HL2.
+
+## Files it produces
+
+| File | Purpose |
+|---|---|
+| `pod-charter-<slug>.md` | Why: drivers, goals, stakeholders, scope (consultant mode) |
+| `process-<apqc>-<slug>.md` + `sipoc-raci-<slug>.md` | How the work runs today and who decides |
+| `pod-<role>-<subrole>.md` | The Pod spec and paste-ready platform fields |
+| `harness-<slug>.md` | Control Envelope and control verification |
+| `data-connector-<slug>.md` | Data objects, connectors, environments |
+| `ontology-<outcome>.md` | Knowledge pack per outcome + flat upload set |
+| `goldens-<outcome>.md` | Signed goal + test cases per outcome |
+| `role-binding-<slug>.md` | Role → current holder and cover (uploaded as a source) |
+| `pod-contract-<slug>.md` | Playback log and signed design agreement |
 
 ## Strict production prohibition
 
@@ -56,7 +158,7 @@ Production release is a separate human-controlled process outside this skill. Th
 
 Use the host's available tools and the recipient's approved sources. Read applicable local instructions. No installation, account connection or permission follows from importing this package. Reference guidance uses company-neutral design checks.
 
-Version **1.0.0** provides self-contained generic guidance, a non-waivable production boundary and synthetic refusal scenarios. Test cases start unrun; static package validation is not runtime certification. Intended departments: Engineering, PMO and Operations.
+The package provides self-contained generic guidance, a non-waivable production boundary and synthetic refusal scenarios. Test cases start unrun; static package validation is not runtime certification. Intended departments: Engineering, PMO and Operations.
 
 The plugin is named `agensia-harness` and its skill is `make-pod`. The P2A method, resources and production prohibition are preserved under this name.
 
@@ -73,5 +175,5 @@ Skill paths and names below are the current invocation identifiers. Previous nam
 |---|---|
 | [make-pod](skills/make-pod/SKILL.md) | Engineering, PMO, Operations |
 
-Catalog fingerprint: `ae0fb7f68804b738e4ab3591fe1d577ff3daa1c14b7eac62bfae17f2c51870a9`.
+Catalog fingerprint: `a257b59959a8bae8f33cab87ca294b9c24aff919ea6443fe106fe9da6df56d8a`.
 <!-- END SKILL CATALOG -->

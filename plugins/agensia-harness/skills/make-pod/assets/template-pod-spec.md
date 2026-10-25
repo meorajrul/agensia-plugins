@@ -12,6 +12,11 @@ updated: <YYYY-MM-DD>
 role: <Pod Hierarchy Role, e.g. "Finance Operations">
 subrole: <Pod Hierarchy Subrole, e.g. "AP Invoice Processing Specialist">
 harness: harness-<slug>.md
+charter: pod-charter-<slug>.md
+sipoc_raci: sipoc-raci-<slug>.md
+catalogue: data-connector-<slug>.md
+contract: pod-contract-<slug>.md
+builder_is_owner: false   # true only when the builder is the accountable process owner
 ontologies:
   - {id: ONT-O1-<slug>, file: ontology-<outcome-slug>.md, serves_outcome: 1, tier: bronze}
 goldens:
@@ -51,6 +56,28 @@ skills:
 **Example invocation:** <short prompt labelled Outcome / Context / Sources / Scope / Authority / Output / Verification, consistent with this approved design>
 
 **Readiness:** design <draft / reviewed> · baseline <not run / run ID> · required controls <specified / verified / blocked — see harness control IDs>. Design-gate approval does not approve individual runtime actions. Unrun baselines and unverified required controls prevent a go-live claim for the dependent capability.
+
+## Requirements register
+
+> One ID per requirement, traced from source to test. Tag the source of each requirement (`OWN`, `DOC`, `SME`, `OBS`, `INF`, `ASM`). `INF` or `ASM` requirements cannot be marked accepted. TOGAF crosswalk: `references/togaf-crosswalk.md`.
+
+| ID | Requirement | Source / who stated it | Tag | Priority (must / should / could) | Outcome # | Component (Outcome / Ontology / Talent / Role / Workflow / Desk / Envelope) | Golden case IDs | Status |
+|---|---|---|---|---|---|---|---|---|
+| R1 | | | | must | 1 | | | open |
+
+## Gap matrix (as-is → to-be)
+
+| As-is capability / step | Gap | To-be component | Change type (new / changed / retired / unchanged) | Owner | Tag |
+|---|---|---|---|---|---|
+| | | | | | |
+
+## HL roadmap (transition states)
+
+> New Pods start at HL0–HL2. Each step up needs its evidence gate and a new harness version. This plans transitions; it never raises an HL by itself.
+
+| Talent | Launch HL | Next HL | Evidence gate to move | Earliest review date | Approver |
+|---|---|---|---|---|---|
+| S1 | HL1 | HL2 | <e.g. 30 days, override rate < x, baseline PROMOTE> | | |
 
 ## Persona & Voice
 

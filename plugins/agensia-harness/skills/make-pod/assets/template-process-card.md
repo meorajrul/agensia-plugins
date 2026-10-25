@@ -19,9 +19,28 @@ agent_assignment: []   # e.g. [{pod: pod-<role>-<subrole>.md, skills: [A2, A3]}]
 
 # Process — <name> (APQC <apqc_id>)
 
+> Tag captured values `[OWN]` `[DOC]` `[SME]` `[OBS]` `[INF]` `[ASM]` (see `references/elicitation-cards.md`). Charter: `pod-charter-<slug>.md`. SIPOC and RACI: `sipoc-raci-<slug>.md`.
+
 ## Narrative
 
 <3–6 sentences: trigger to outcome, plain language a new hire would understand.>
+
+## As-is (baseline) — how the work runs today
+
+<Walk through the last real case. Name who did each step, the wait points and the rework.>
+
+| Baseline measure | Value | Date / sample | Tag |
+|---|---|---|---|
+| Volume per period | | | |
+| Cycle time (median / p90) | | | |
+| Rework or rejection rate | | | |
+| Main pain points | | | |
+
+## To-be (target) — what changes when the Pod arrives
+
+| As-is step | To-be step | Changed by (Talent / Workflow / human) | HL | Expected effect | Tag |
+|---|---|---|---|---|---|
+| | | | | | |
 
 ## Activity table (normative)
 

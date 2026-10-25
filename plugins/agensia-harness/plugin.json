@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "agensia-harness",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "Design governed Agensia Pods and agent harnesses with explicit authority, G0\u2013G8 design gates, ontology, saved Workflow specifications and acceptance checks. Local drafting by default. Strictly prohibits production mutations; platform operations require verified non-production platform and downstream targets.",
   "author": {
     "name": "Meor Ajrul",

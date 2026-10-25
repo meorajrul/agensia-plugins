@@ -20,6 +20,11 @@ All artifacts: UTF-8 markdown + YAML frontmatter. Frontmatter = machine contract
 ├── <standard-short-name>.md           # as9100.md, iso-9001.md, pdpa-my.md — shared
 ├── <process-slug>.drawio              # human reference, never uploaded
 ├── pod-<role>-<subrole>.md
+├── pod-charter-<slug>.md         # consultant mode: drivers, goals, stakeholders (TOGAF A)
+├── sipoc-raci-<slug>.md          # consultant mode: SIPOC, RACI, decision rights (TOGAF B)
+├── data-connector-<slug>.md      # data objects, connectors, environments (TOGAF C/D)
+├── role-binding-<slug>.md        # role → current holder and cover; uploaded as a source
+├── pod-contract-<slug>.md        # playback log + signed design agreement (TOGAF G)
 ├── data-object-<slug>.md
 ├── system-<slug>.md
 └── decisions-log.md              # append-only ADRs

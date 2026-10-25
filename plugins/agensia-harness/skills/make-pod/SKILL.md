@@ -64,6 +64,18 @@ Maintain one **Prompt framework coverage** table per outcome inside the Pod spec
 
 14. **Required integration is a stop condition.** At intake and whenever a dependency appears, identify connectors needed by the requested workflow, guardrails, process or HITL. If missing, misconfigured, inaccessible or unable to verify required approval state, stop the dependent request and explain the exact prerequisite the user must resolve. Resume only after the authorised instance, permissions, identity mapping and required read/approval transition are verified. One-shot mode and design-gate waivers do not bypass this condition. Never silently substitute general chat, a mock or in-chat approval for the required integration.
 
+## Builder is not the process owner (consultant mode)
+
+This is the default. Set `builder_is_owner: false` in the Pod spec unless the accountable process owner is the person building. In consultant mode:
+
+1. **Tag every captured fact** with its provenance: `OWN` (process owner), `DOC` (approved document), `SME` (performer or expert), `OBS` (observed), `INF` (inferred) or `ASM` (assumed). A gate cannot pass while a *must* field is `INF` or `ASM`.
+2. **Ask the right role.** Use `references/elicitation-cards.md`. It lists, for each Agensia component (Charter, Process, Outcome, Ontology group, Talent, Role, Control Envelope/HL, Escalation/Decision Desk, Workflow, Data and connector, Golden set), the question to ask, who must answer, the accepted evidence and the safe default. Performers give steps; owners give rules, HLs and targets.
+3. **Add the TOGAF-derived artefacts** in `references/togaf-crosswalk.md` §Minimum set. The usual set is `assets/template-pod-charter.md` (G0), `assets/template-sipoc-raci.md` (G0–G1), `assets/template-data-connector-catalogue.md` (G0/G3) and `assets/template-pod-contract.md` (playback before G1, G3, G6 and G8; signature at G8).
+4. **Name roles, not people.** Approvers and escalation targets in sources, Talents and Workflows are roles. A `role-binding-<pod>.md` source from `assets/template-role-binding.md` maps them to current holders and cover roles (elicitation cards §5).
+6. **Existing Pod?** Run `references/retrofit-review.md` first. Report findings and prepare the revision as a new version; do not edit the live Pod during review.
+7. **Workflow binding.** Before binding a Workflow task to a Pod, verify the Pod is selectable in the target. If it is not, save the Workflow, mark the binding `blocked` and record the dependency.
+5. **Play back before the gate.** Read the `INF`, `ASM` and `SME` rows back to the owner in plain sentences and log the answers in the Pod Contract. Then ask the gate question.
+
 ## Approval identity default
 
 Default identity model: CONNECTOR_OWNER. Use the authenticated connector account email as the acting identity; require it to match the live assigned reviewer/approver and verify scoped write access. Separate Agensia session email is not required. Typed email or display name is not identity evidence. Shared connections attribute actions to the connector owner; record this limitation, not independent chat-person verification. Preserve explicit human decisions, review-before-approval, case/revision checks, durable receipts and read-back. Client policy may explicitly require a stricter identity model.
@@ -99,15 +111,15 @@ Include the framework coverage changes with the stage draft and distinguish docu
 
 | Gate | Stage | Feeds platform step | Must be true to pass |
 |---|---|---|---|
-| G0 | Intake | — | Activity table confirmed; platform guide read; target/workspace named and non-production verified before operations |
-| G1 | Identity | 4 Pod Hierarchy (Role, Sub-Role) | Role = a job role (digital twin), not an operation; one-sentence mission |
+| G0 | Intake | — | Activity table confirmed; platform guide read; target/workspace named and non-production verified before operations; in consultant mode, Pod Charter drivers/goals/owner confirmed and SIPOC drafted |
+| G1 | Identity | 4 Pod Hierarchy (Role, Sub-Role) | Role = a job role (digital twin), not an operation; one-sentence mission; RACI has one human A per activity and no agent A |
 | G2 | Skills → Talents and Outcomes | 1 Overview (Outcomes) · 3 Talent (Names) | Outcome #n ↔ Talent #n ↔ Sub-Role #n chain; ≤7 talents; each outcome ends in one named output; no overlaps |
 | G3 | Authority | Talent Operation · Guardrails | Every HL confirmed by the user; consequential actions ≤HL2; stop rules set |
 | G4 | Escalation | Pod Hierarchy (Escalation) · Decision Desk | Trigger → role → channel → timeout per HL1+ talent; Human decision route named; native Desk route for required calculated choices |
 | G5 | Persona, audience, format | 4 Pod Hierarchy (8 System Message sections) | All eight sections drafted; no knowledge or procedures inside the role |
 | G6 | Ontology packs | 2 Ontology (groups + upload set) | Promise-to-source check passes; 14-point quality gate passes; upload list is flat, dated, diagram-free |
 | G7 | Golden set | — (evaluation) | Owner goal signed (goal, primary metric, target, floor, δ); cases seeded across five strata |
-| G8 | Emit and submission readiness | All four steps + Submit | Every earlier gate approved; platform pre-checks all pass or are waived by the user in writing; user confirms they will Submit |
+| G8 | Emit and submission readiness | All four steps + Submit | Every earlier gate approved; platform pre-checks all pass or are waived by the user in writing; no *must* requirement left `INF`/`ASM`; Pod Contract signed in consultant mode; user confirms they will Submit |
 
 G3 (authority) is the harness-level decision. G8 is the final gate: it releases the paste-ready package. After G8, authorised non-production configuration may proceed after target verification; inspect the actual supported scoring and submission controls. If the platform scores any section below Satisfactory, bring the "Gap to improve" text back to the matching gate, revise, and re-approve.
 
@@ -144,6 +156,8 @@ Read `references/agensia-platform-walkthrough.md` first. Establish what exists: 
 
 Read `references/prompt-framework.md`. Extract the seven framework items from the request and supplied material into the coverage table, initially at process level; split by outcome at Stage 2. Identify source and tool availability without assuming access. Show a short labelled intake prompt using known facts and explicit gaps; this is a draft brief, not runtime authority.
 
+In consultant mode, also draft the Pod Charter, the process card's as-is and to-be sections, SIPOC and the data and connector catalogue. Use the elicitation cards to direct each open question to the right role. Start the requirements register in the Pod spec.
+
 **→ Gate G0 — Intake.** Also confirm the authorised target workspace/environment, record execution attachment as specified, verified or blocked, and confirm that you have read `references/agensia-platform-walkthrough.md`.
 
 ### Stage 1 — Identity (Role → Subrole)
@@ -169,6 +183,8 @@ Create each outcome’s framework coverage table. Map **Outcome + Scope + Output
 Per skill: proposed HL | why | what the human does. Then derive the headline HL (max across skills), the "May" list, the "Must not" list (include the user's policy and regulatory constraints), and stop rules (conditions that freeze the Pod to observe-only). For regulated industries, read `references/standards-registry.md` and apply the overlay's constraints (e.g., healthcare: licensed-professional decisions cap at HL1).
 
 Translate **Scope + Authority** into per-tool/data permissions and the control verification table in the harness template: action/target, preconditions, human approval, enforcement location, failure behavior and evidence. Where controls are unavailable or untested, mark them explicitly; never present prompt wording as proof that a write or deletion is blocked.
+
+Fill the gap matrix and the HL roadmap in the Pod spec. Each Talent gets a launch HL, its next HL and the evidence gate to move.
 
 **→ Gate G3 — Authority.** The user confirms every HL by name. No HL is carried forward on silence.
 
@@ -251,7 +267,8 @@ Produce, in order:
 4. **Golden set files** — one per outcome, from Stage 7. Save as `goldens-<outcome-slug>.md`. Include the signed owner goal statement, the seeded cases across all five strata, the scorecard with baseline columns left blank for the first run, and the declared MDE.
 5. **Platform Field Mapping** — paste-ready values in the platform's four creation steps, which this P2A design convention maps 1:1 (not a verified platform requirement: **Outcome #n ↔ Talent #n ↔ Sub-Role #n**, each from one activity cluster, with **≥1 ontology pack per outcome**): **Step 1 Overview** — Pod Name + Outcome Definitions, one per cluster, each a self-contained paragraph stating what it does, what it does NOT do, ending with exactly one named output; no overlaps. **Step 2 Ontology** — the upload set from each pack's Part 1E source inventory, grouped, each group stating "what these sources help determine", each source carrying its version, effective dates, jurisdiction and authority rank; small single-purpose files with flat, collision-free names (`decision-rules-<outcome>.md`, `glossary-<outcome>.md`, `lexicon-<outcome>.md`, `report-layout-<outcome>.md`, `as9100.md`), never a monolithic PDF, and no diagrams. **Step 3 Talent** — one talent per outcome with Name, Description ("Use when…" + trigger phrases), and a full Operation spec (purpose, required inputs, rule tables from decision_rule, exact output layout, what it does NOT do, edge cases) — this is where most writing lives. **Step 4 Pod Hierarchy** — one Role (the lane) + one Sub-Role per talent, plus values for the eight System Message sections the platform generates per role/sub-role: **Identity, Audience, Voice and Tone, Response Format and Depth, Authority and Boundaries, Escalation, Guardrails** (absolute never-do rules) and **Skills** (the talent names). The platform scores Outcome–Ontology alignment and each ontology group on Completeness/Uniqueness/Usability (x/5); all sections must reach satisfactory to proceed.
 6. **Role System Message block** — ready-to-paste values for the eight sections: Identity, Audience, Voice and Tone, Response Format and Depth, Authority and Boundaries (May/Must-not/HL statement), Escalation, Guardrails, Skills (Talent names). Refuse and escalate outside the envelope. Keep procedures, knowledge content and tool instructions in their mapped ontology/Talent fields; do not concatenate every framework item into this block.
-7. **Open items** — every TBD, every ontology coverage gap (a competency question with no source), every unsigned owner goal, and next steps (e.g., "run the baseline before go-live", "run 30 days at HL2 plus a 120+ case suite at 3 repeats before requesting HL3 on S2").
+7. **Consultant-mode files** — when `builder_is_owner: false`: `pod-charter-<slug>.md`, `sipoc-raci-<slug>.md`, `data-connector-<slug>.md` and the signed `pod-contract-<slug>.md` with its playback log.
+8. **Open items** — every `INF`/`ASM` value, every TBD, every ontology coverage gap (a competency question with no source), every unsigned owner goal, and next steps (e.g., "run the baseline before go-live", "run 30 days at HL2 plus a 120+ case suite at 3 repeats before requesting HL3 on S2").
 
 Include a **Deployment handoff** section in the Pod spec using `references/platform-evidence-and-onboarding.md`: target/actors, knowledge and connectors, configuration read-back, availability, user acceptance, action controls and operational ownership. Record each as specified, verified, blocked or not applicable with reason; link evidence and open items. Preparing this handoff does not execute deployment or pass its acceptance checks.
 
@@ -278,6 +295,9 @@ Use these where they fit the step named. They structure the thinking and never r
 
 | File | Read when |
 |---|---|
+| `references/elicitation-cards.md` | **At G0 whenever the builder is not the process owner**, and before every playback — question, answering role, evidence and safe default per Agensia component; provenance tags |
+| `references/retrofit-review.md` | Improving, extending or rebuilding an existing Pod — read-only checks RR1–RR12, findings report, revision as a new version |
+| `references/togaf-crosswalk.md` | Client or architect expects TOGAF/EA deliverables; choosing the minimum consultant-mode artefact set |
 | `references/configuration-verification.md` | Revising or scoring configurations — stage persistence, regeneration, helper provenance, source consistency, case evidence and bounded runtime checks |
 | `references/platform-knowledge-and-uat.md` | **At G0/G7 and platform knowledge review** — component selection, generic acceptance coverage, assertion traceability and unrun regression candidates |
 | `references/agensia-platform-walkthrough.md` | **Always at Stage 0**, and before every gate that feeds a platform step — configuration model, Talent and System Message fields, supporting components and non-production verification |
@@ -311,4 +331,6 @@ Use these where they fit the step named. They structure the thinking and never r
 - **Skipping an approval gate.** "Just submit it" or "approve everything" hides the authority and ontology decisions the owner signs for. Offer the consolidated draft and ask for each gate by name.
 - **An operation dressed as a Pod.** "Flag gaps" is a Talent. The Pod is the job role that owns several Talents.
 - **The uncovered promise.** An outcome that promises a chart, format or audience no source defines scores low on Completeness. Add the source or drop the promise.
+- **The consultant's guess as fact.** A builder who is not the owner writes a confident rule, HL or target that nobody confirmed. Tag it `INF`, play it back, and leave it out of the gate until the owner says "correct".
+- **Asking the wrong person.** Performers know steps; only the owner sets rules, HLs and targets. Use the elicitation cards' "Who" column.
 - **The rubber-stamp gate.** Thirty approvals a day, a bare Approve button, an override rate of zero. That is the appearance of control with none of the substance — and it is worse than no gate, because everyone stops looking.
