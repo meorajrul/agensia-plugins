@@ -5,7 +5,7 @@
     "path": "plugins/agensia-harness/skills/make-pod/SKILL.md",
     "description": "Design an Agensia Pod locally or convert a business process into a governed AI Pod specification with P2A. Apply Outcome, Context, Sources, Scope, Authority, Output and Verification throughout the G0–G8 approval workflow aligned to the Agensia wizard (Overview, Ontology, Talent, Pod Hierarchy). Covers BPMN capture, harness levels HL0–HL4, control envelopes, ontology packs, Talents, saved Workflows, Decision Desk, human checkpoints, golden sets and regressions. Use when the user asks to create, build, design or agentify a Pod, write or evaluate its prompt, outcomes, Talents or ontology, set what an agent may do, or check whether a Pod change meets its owner’s goals.",
     "departments": "Engineering, PMO, Operations",
-    "sha256": "a49c567cac51f470e45ad84f06c6aabb01058460211e83c823b8fc6b66493fc4",
+    "sha256": "8cf3ffb28154288f8a2a61cb12404e005862c0b24a6e1bb644e5f31dd8105938",
     "shared_scripts_sha256": null
   }
 ]

@@ -6,6 +6,8 @@ Download installable ZIPs from [GitHub Releases](https://github.com/meorajrul/ag
 
 Reference guidance now uses self-contained, company-neutral design checks for coverage, decision risk, reversibility and ownership.
 
+Version **1.1.1** adds generic configuration verification: commit/save/reopen checks, generated Talent and role reconciliation, page-helper evidence provenance, source consistency, honest score interpretation and bounded runtime regression candidates. It separates reusable methods from case facts and observed receipts; no customer data or fixed score guarantee is included.
+
 [Installation guide: ChatGPT Desktop, Claude Desktop and manual ZIP import](docs/INSTALL.md).
 
 Dedicated platform skills for designing governed Agensia Pods and agent harnesses. Bring your own process, approved sources and accountable owner.
@@ -43,5 +45,5 @@ These are intended users of the plugins. PMO means project management; GTM means
 
 [Browse every skill](docs/skill-catalog.md) · [Name migration](docs/skill-name-migration.json)
 
-Catalog fingerprint: `2f9398c381ff3dfc12249654924c33706898a027c510a9f121fd216dc82def88`.
+Catalog fingerprint: `ae0fb7f68804b738e4ab3591fe1d577ff3daa1c14b7eac62bfae17f2c51870a9`.
 <!-- END BUNDLE CATALOG -->

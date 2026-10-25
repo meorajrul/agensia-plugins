@@ -70,6 +70,8 @@ Default identity model: CONNECTOR_OWNER. Use the authenticated connector account
 
 ## Repeatable operation and central workspace
 
+For configuration revisions or score-guided improvement, read [configuration verification](references/configuration-verification.md). Commit each edited stage, save/reopen and compare actual fields before evaluation or submission. Reconcile regenerated Talents and roles, verify Workflow bindings separately, and distinguish helper advice, saved-state evidence and runtime proof. Missing case evidence is an open dependency, never permission to invent facts or guarantee a maximum score.
+
 Read `references/converse-operating-process.md` at G0 and when revising a deployed process. For repeatable or decision-bearing work use [Workflow execution contract](references/workflow-execution-contract.md) at G0/G6/G8: map SIPOC/BPMN and human RACI, then allocate one reusable saved Workflow per named repeatable output. The Pod coordinates; ontology supplies procedures/templates; Workflows execute; a required calculated Decision Desk result returns to the originating flow. Ordinary human review is not automatically a Desk calculation. One Talent need not equal one Workflow.
 
 Carry data contracts, capability preflight, saved task/source bindings, human provenance and dashboard checks through the gates. At G8 include an **Operating playbook** using `references/converse-prompt-playbook.md`: sequential prompts, Workflow/output registry, independently bound templates and an acceptance ledger. Collections, Blueprints and schedules are optional; add a Desk route for required calculations. Define prerequisites, result, stop condition and acceptance evidence. Preparing the playbook does not execute or activate it.
@@ -276,6 +278,7 @@ Use these where they fit the step named. They structure the thinking and never r
 
 | File | Read when |
 |---|---|
+| `references/configuration-verification.md` | Revising or scoring configurations — stage persistence, regeneration, helper provenance, source consistency, case evidence and bounded runtime checks |
 | `references/platform-knowledge-and-uat.md` | **At G0/G7 and platform knowledge review** — component selection, generic acceptance coverage, assertion traceability and unrun regression candidates |
 | `references/agensia-platform-walkthrough.md` | **Always at Stage 0**, and before every gate that feeds a platform step — configuration model, Talent and System Message fields, supporting components and non-production verification |
 | `references/workflow-execution-contract.md` | **At G0/G6/G8 for repeatable or decision-bearing work** — process allocation, short native tasks, source/template bindings, capability diagnosis, Desk return, receipts and outcome acceptance |

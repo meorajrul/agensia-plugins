@@ -6,6 +6,8 @@ Download installable ZIPs from [GitHub Releases](https://github.com/meorajrul/ag
 
 Reference guidance now uses self-contained, company-neutral design checks for coverage, decision risk, reversibility and ownership.
 
+Version **1.1.1** adds generic configuration verification: commit/save/reopen checks, generated Talent and role reconciliation, page-helper evidence provenance, source consistency, honest score interpretation and bounded runtime regression candidates. It separates reusable methods from case facts and observed receipts; no customer data or fixed score guarantee is included.
+
 [Installation guide: ChatGPT Desktop, Claude Desktop and manual ZIP import](../../docs/INSTALL.md).
 
 Design governed AI Pods from business processes, approved sources and explicit human responsibilities. P2A connects **Outcome, Context, Sources, Scope, Authority, Output and Verification** through nine design gates, G0–G8.
@@ -47,6 +49,7 @@ Production release is a separate human-controlled process outside this skill. Th
 | [Onboarding verification](skills/make-pod/references/platform-evidence-and-onboarding.md) | Actor/access map and evidence-based handoff |
 | [Workflow contract](skills/make-pod/references/workflow-execution-contract.md) | Versioned tasks, bindings, native gates and recovery |
 | [Prompt playbook](skills/make-pod/references/converse-prompt-playbook.md) | Templates for authorised non-production operation |
+| [Configuration verification](skills/make-pod/references/configuration-verification.md) | Saved-state checks, score-guided changes and runtime evidence |
 | [Evaluation](skills/make-pod/references/pod-evaluation.md) | Owner goals, paired comparison and regression gates |
 
 ## Use and verification
@@ -70,5 +73,5 @@ Skill paths and names below are the current invocation identifiers. Previous nam
 |---|---|
 | [make-pod](skills/make-pod/SKILL.md) | Engineering, PMO, Operations |
 
-Catalog fingerprint: `2f9398c381ff3dfc12249654924c33706898a027c510a9f121fd216dc82def88`.
+Catalog fingerprint: `ae0fb7f68804b738e4ab3591fe1d577ff3daa1c14b7eac62bfae17f2c51870a9`.
 <!-- END SKILL CATALOG -->

@@ -4,6 +4,8 @@ An outcome that cannot be re-tested is an outcome nobody can safely change. This
 
 **One golden set per outcome.** It lives in its own artifact, `goldens-<outcome-slug>.md`, and is versioned independently of the knowledge it tests.
 
+Platform configuration scores are a separate diagnostic, not results from this golden-set loop. Before score-guided edits, use [configuration verification](configuration-verification.md) to confirm committed fields, current source bindings and feedback provenance. Do not infer a score for unscored sections or claim runtime improvement from a higher wizard rating.
+
 ---
 
 ## The loop
