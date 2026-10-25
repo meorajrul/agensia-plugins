@@ -1,16 +1,22 @@
 {
   "agensia-pods:p2a-pod-builder": {
     "previous_name": "p2a-pod-builder",
-    "name": "agensia-harness",
+    "name": "make-pod",
     "previous_collection": "agensia-cg-plugins",
     "plugin": "agensia-harness",
-    "new_path": "plugins/agensia-harness/skills/agensia-harness/SKILL.md"
+    "new_path": "plugins/agensia-harness/skills/make-pod/SKILL.md"
   },
   "agensia-pods:stratiq-p2a-pod-builder": {
     "previous_name": "stratiq-p2a-pod-builder",
-    "name": "agensia-harness",
+    "name": "make-pod",
     "previous_collection": "agensia-cg-plugins",
     "plugin": "agensia-harness",
-    "new_path": "plugins/agensia-harness/skills/agensia-harness/SKILL.md"
+    "new_path": "plugins/agensia-harness/skills/make-pod/SKILL.md"
+  },
+  "agensia-harness:agensia-harness": {
+    "previous_name": "agensia-harness",
+    "name": "make-pod",
+    "plugin": "agensia-harness",
+    "new_path": "plugins/agensia-harness/skills/make-pod/SKILL.md"
   }
 }

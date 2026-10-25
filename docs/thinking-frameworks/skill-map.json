@@ -3,7 +3,7 @@
   "excluded_plugins": {},
   "excluded_skills": {},
   "skills": {
-    "agensia-harness/agensia-harness": {
+    "agensia-harness/make-pod": {
       "anchor": "## Reference files",
       "frameworks": [
         {

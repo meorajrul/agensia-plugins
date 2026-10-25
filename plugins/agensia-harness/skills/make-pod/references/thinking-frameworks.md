@@ -1,4 +1,4 @@
-# Thinking frameworks for agensia-harness
+# Thinking frameworks for make-pod
 
 Use these neutral design checks at the named steps. They do not replace evidence, authorisation, approval or the production prohibition.
 

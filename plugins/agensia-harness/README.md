@@ -1,5 +1,7 @@
 # Agensia Harness
 
+The skill is now named `make-pod`; the plugin remains `agensia-harness`.
+
 Download installable ZIPs from [GitHub Releases](https://github.com/meorajrul/agensia-plugins/releases/latest). ZIP archives are release assets and are not stored in the source tree.
 
 Reference guidance now uses self-contained, company-neutral design checks for coverage, decision risk, reversibility and ownership.
@@ -10,7 +12,7 @@ Design governed AI Pods from business processes, approved sources and explicit h
 
 ## Agensia Harness
 
-Start with [the skill](skills/agensia-harness/SKILL.md). Supply a process/SOP, intended users and outputs, approved knowledge, systems and accountable owner. A partial brief is enough to begin a labelled draft; missing facts remain open.
+Start with [the skill](skills/make-pod/SKILL.md). Supply a process/SOP, intended users and outputs, approved knowledge, systems and accountable owner. A partial brief is enough to begin a labelled draft; missing facts remain open.
 
 The skill produces a Pod specification, harness/control specification, ontology packs, per-outcome golden tests, platform field mapping and operating handoff. Local drafting is the default. No private reference library, environment URL or particular workspace folder structure is required. Keep the whole skill folder together when sharing it.
 
@@ -40,12 +42,12 @@ Production release is a separate human-controlled process outside this skill. Th
 
 | Guide | Purpose |
 |---|---|
-| [Platform guide](skills/agensia-harness/references/agensia-platform-walkthrough.md) | Components and four-part configuration |
-| [Capabilities and acceptance](skills/agensia-harness/references/platform-knowledge-and-uat.md) | Generic coverage and negative tests |
-| [Onboarding verification](skills/agensia-harness/references/platform-evidence-and-onboarding.md) | Actor/access map and evidence-based handoff |
-| [Workflow contract](skills/agensia-harness/references/workflow-execution-contract.md) | Versioned tasks, bindings, native gates and recovery |
-| [Prompt playbook](skills/agensia-harness/references/converse-prompt-playbook.md) | Templates for authorised non-production operation |
-| [Evaluation](skills/agensia-harness/references/pod-evaluation.md) | Owner goals, paired comparison and regression gates |
+| [Platform guide](skills/make-pod/references/agensia-platform-walkthrough.md) | Components and four-part configuration |
+| [Capabilities and acceptance](skills/make-pod/references/platform-knowledge-and-uat.md) | Generic coverage and negative tests |
+| [Onboarding verification](skills/make-pod/references/platform-evidence-and-onboarding.md) | Actor/access map and evidence-based handoff |
+| [Workflow contract](skills/make-pod/references/workflow-execution-contract.md) | Versioned tasks, bindings, native gates and recovery |
+| [Prompt playbook](skills/make-pod/references/converse-prompt-playbook.md) | Templates for authorised non-production operation |
+| [Evaluation](skills/make-pod/references/pod-evaluation.md) | Owner goals, paired comparison and regression gates |
 
 ## Use and verification
 
@@ -53,7 +55,7 @@ Use the host's available tools and the recipient's approved sources. Read applic
 
 Version **1.0.0** provides self-contained generic guidance, a non-waivable production boundary and synthetic refusal scenarios. Test cases start unrun; static package validation is not runtime certification. Intended departments: Engineering, PMO and Operations.
 
-The plugin and skill are both named `agensia-harness`. The P2A method, resources and production prohibition are preserved under this name.
+The plugin is named `agensia-harness` and its skill is `make-pod`. The P2A method, resources and production prohibition are preserved under this name.
 
 <!-- BEGIN SKILL CATALOG -->
 ## Departments and portable skills
@@ -66,7 +68,7 @@ Skill paths and names below are the current invocation identifiers. Previous nam
 
 | Skill | Intended departments |
 |---|---|
-| [agensia-harness](skills/agensia-harness/SKILL.md) | Engineering, PMO, Operations |
+| [make-pod](skills/make-pod/SKILL.md) | Engineering, PMO, Operations |
 
-Catalog fingerprint: `46b601466afee2d1cedaeb5dbfcd351d9a8e3c5f7a257eeaf6a62f382498e297`.
+Catalog fingerprint: `2f9398c381ff3dfc12249654924c33706898a027c510a9f121fd216dc82def88`.
 <!-- END SKILL CATALOG -->

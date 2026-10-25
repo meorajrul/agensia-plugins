@@ -2,7 +2,7 @@
 
 ## Choose your download
 
-- [Skill ZIP](https://github.com/meorajrul/agensia-plugins/releases/latest/download/agensia-harness.zip): use for custom-skill upload in ChatGPT or Claude, or manual folder installation.
+- [Skill ZIP](https://github.com/meorajrul/agensia-plugins/releases/latest/download/make-pod.zip): use for custom-skill upload in ChatGPT or Claude, or manual folder installation.
 - [Portable plugin ZIP](https://github.com/meorajrul/agensia-plugins/releases/latest/download/agensia-harness-plugin.zip): use only in a host supporting Agent Plugins v1. It is not the custom-skill upload ZIP.
 
 ## ChatGPT Desktop
@@ -21,7 +21,7 @@ Official guidance: [Skills and Plugins](https://learn.chatgpt.com/docs/skills-an
 1. Download the **Skill ZIP** and keep it zipped.
 2. Enable **Code execution and file creation** under Settings → Capabilities, if required. Organisation policy may control this capability.
 3. Open **Customize → Skills → + → Create skill → Upload a skill**.
-4. Upload `agensia-harness.zip`, then enable it in the skills list.
+4. Upload `make-pod.zip`, then enable it in the skills list.
 5. Start a chat and request a governed Pod draft using Agensia Harness.
 
 If the upload control is missing, check organisation permissions and the current app version. The skill ZIP contains one top-level skill folder with `SKILL.md` and supporting resources.
@@ -31,9 +31,9 @@ Official guidance: [Use skills in Claude](https://support.claude.com/en/articles
 ## Manual ZIP installation for local skill hosts
 
 1. Download and extract the **Skill ZIP**.
-2. Keep the complete `agensia-harness/` folder, including `SKILL.md`, `assets/`, `references/` and `evals/`.
-3. Put that folder directly inside the host's supported skill directory. For Codex project discovery use `<project>/.agents/skills/agensia-harness/`; for Claude Code project discovery use `<project>/.claude/skills/agensia-harness/`.
-4. Start a fresh session and confirm the host lists the skill. Avoid an extra nested `agensia-harness/agensia-harness/` folder.
+2. Keep the complete `make-pod/` folder, including `SKILL.md`, `assets/`, `references/` and `evals/`.
+3. Put that folder directly inside the host's supported skill directory. For Codex project discovery use `<project>/.agents/skills/make-pod/`; for Claude Code project discovery use `<project>/.claude/skills/make-pod/`.
+4. Start a fresh session and confirm the host lists the skill. Avoid an extra nested `make-pod/make-pod/` folder.
 
 Desktop chat applications use their upload/import controls; copying into a coding host's project directory does not install a skill in every desktop app.
 
@@ -46,7 +46,7 @@ Run in Claude Code:
 /plugin install agensia-harness@agensia-plugins
 ```
 
-The plugin and skill are both named `agensia-harness`. Some hosts show the qualified name `agensia-harness:agensia-harness`.
+The plugin is named `agensia-harness` and its skill is `make-pod`. Some hosts show the qualified name `agensia-harness:make-pod`.
 
 ## Confirm installation and update
 

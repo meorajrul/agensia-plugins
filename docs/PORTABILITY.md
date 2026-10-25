@@ -12,7 +12,7 @@ Keep the complete selected skill folder, including references, assets and evalua
 | Hermes native registration | Use the collection adapter with a supported host |
 | Plain chat | Supply the skill and relevant bundled references as context |
 
-Plugin identity is `agensia-harness`; skill identity is also `agensia-harness`. A host that qualifies skill names may display `agensia-harness:agensia-harness`. Importing instructions does not install integrations, authenticate accounts or grant authority.
+Plugin identity is `agensia-harness`; skill identity is `make-pod`. A host that qualifies skill names may display `agensia-harness:make-pod`. Importing instructions does not install integrations, authenticate accounts or grant authority.
 
 ## Local checks and exports
 
@@ -22,7 +22,7 @@ From the source collection root, use Python 3.10+ and install the dependency in 
 python3 scripts/thinking_frameworks.py --check
 python3 scripts/skill_bundle.py docs --check
 python3 scripts/skill_bundle.py validate
-python3 scripts/skill_bundle.py export --plugin agensia-harness --skill agensia-harness --output ./dist/skills
+python3 scripts/skill_bundle.py export --plugin agensia-harness --skill make-pod --output ./dist/skills
 python3 scripts/skill_bundle.py export-plugin --plugin agensia-harness --output ./dist/plugins
 ```
 
